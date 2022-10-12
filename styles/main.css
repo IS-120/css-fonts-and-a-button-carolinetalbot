@@ -1,10 +1,61 @@
+:root {
+  --midnight: #27313a;
+  --mineral-green: #416357;
+  --amulet: #7b9c72;
+  --moon-mist: #d5dbc7;
+  --highlight-gold: #e0bf72;
+
+  --font-color: #333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  font-family: "Alice", serif;
+  line-height: 1.5;
+  color: var(--font-color);
+}
+
+main {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 50rem;
+}
+
+article {
+  margin-bottom: 4rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", serif;
+  color: var(--midnight);
 }
 
 img {
   width: 100%;
+  height: auto;
+  max-width: 600px;
   display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--mineral-green);
+}
+
+a[href]:hover {
+  color: var(--moon-mist);
+  transition: color 300ms;
+}
+
+picture img {
+  max-width: none;
 }
 
 svg {
@@ -21,4 +72,19 @@ img[srcset] {
 /* temporary fix to size svg images */
 img[src$="svg"] {
   width: 200px;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--mineral-green);
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+
+  transition: opacity 300ms;
+}
+
+.button:hover {
+  opacity: 0.8;
 }
